@@ -40,34 +40,7 @@ class _Add_creenState extends State<Add_creen> {
     );
   }
 
-  Widget button() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: custom_green,
-            minimumSize: Size(170, 48),
-          ),
-          onPressed: () {
-            Firestore_Datasource().AddNote(subtitle.text, title.text, indexx);
-            Navigator.pop(context);
-          },
-          child: Text('add task'),
-        ),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red,
-            minimumSize: Size(170, 48),
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Cancel'),
-        ),
-      ],
-    );
-  }
+ 
 
   Container imagess() {
     return Container(
