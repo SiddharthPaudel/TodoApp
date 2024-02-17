@@ -92,7 +92,34 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
-
+  Widget SignUP_bottom() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: GestureDetector(
+        onTap: () {
+          AuthenticationRemote()
+              .register(email.text, password.text, PasswordConfirm.text);
+        },
+        child: Container(
+          alignment: Alignment.center,
+          width: double.infinity,
+          height: 50,
+          decoration: BoxDecoration(
+            color: custom_green,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Text(
+            'Sign Up',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget textfield(TextEditingController _controller, FocusNode _focusNode,
       String typeName, IconData iconss) {
@@ -134,20 +161,5 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
-  Widget image() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: Container(
-        width: double.infinity,
-        height: 300,
-        decoration: BoxDecoration(
-          color: backgroundColors,
-          image: DecorationImage(
-            image: AssetImage('images/7.png'),
-            fit: BoxFit.fitWidth,
-          ),
-        ),
-      ),
-    );
-  }
+ 
 }
