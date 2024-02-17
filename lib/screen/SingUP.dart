@@ -66,7 +66,9 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
 
   Widget account() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+
+
+      padding: const EdgeInsets.symmetric(horizontal: 17),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -82,10 +84,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 14,
-                  fontWeight: FontWeight.bold),
-
-
-                  
+                  fontWeight: FontWeight.bold)
             ),
           )
         ],
