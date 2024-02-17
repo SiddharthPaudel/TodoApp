@@ -56,7 +56,6 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
       ),
     );
   }
-
   Widget account() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),

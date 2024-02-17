@@ -68,7 +68,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     return Padding(
 
 
-      padding: const EdgeInsets.symmetric(horizontal: 17),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
