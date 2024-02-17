@@ -40,45 +40,36 @@ class _Add_creenState extends State<Add_creen> {
     );
   }
 
- 
-
-  Container imagess() {
-    return Container(
-      height: 180,
-      child: ListView.builder(
-        itemCount: 4,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              setState(() {
-                indexx = index;
-              });
-            },
-            child: Padding(
-              padding: EdgeInsets.only(left: index == 0 ? 7 : 0),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    width: 2,
-                    color: indexx == index ? custom_green : Colors.grey,
-                  ),
-                ),
-                width: 140,
-                margin: EdgeInsets.all(8),
-                child: Column(
-                  children: [
-                    Image.asset('images/${index}.png'),
-                  ],
-                ),
-              ),
-            ),
-          );
-        },
-      ),
+  Widget button() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: custom_green,
+            minimumSize: Size(170, 48),
+          ),
+          onPressed: () {
+            Firestore_Datasource().AddNote(subtitle.text, title.text, indexx);
+            Navigator.pop(context);
+          },
+          child: Text('add task'),
+        ),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.red,
+            minimumSize: Size(170, 48),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Cancel'),
+        ),
+      ],
     );
   }
+
+
 
   Widget title_widgets() {
     return Padding(
