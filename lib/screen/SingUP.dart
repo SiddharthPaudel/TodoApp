@@ -161,5 +161,20 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
- 
+  Widget image() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Container(
+        width: double.infinity,
+        height: 300,
+        decoration: BoxDecoration(
+          color: backgroundColors,
+          image: DecorationImage(
+            image: AssetImage('images/7.png'),
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+      ),
+    );
+  }
 }
