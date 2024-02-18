@@ -10,7 +10,10 @@ abstract class AuthenticationDatasource {
 
 class AuthenticationRemote extends AuthenticationDatasource {
   @override
-  
+  Future<void> login(String email, String password) async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email.trim(), password: password.trim());
+  }
 
   @override
   Future<void> register(
