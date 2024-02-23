@@ -36,7 +36,33 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     });
   }
 
-  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: backgroundColors,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              image(),
+              SizedBox(height: 50),
+              textfield(email, _focusNode1, 'Email', Icons.email),
+              SizedBox(height: 10),
+              textfield(password, _focusNode2, 'Password', Icons.password),
+              SizedBox(height: 10),
+              textfield(PasswordConfirm, _focusNode3, 'PasswordConfirm',
+                  Icons.password),
+              SizedBox(height: 8),
+              account(),
+              SizedBox(height: 20),
+              SignUP_bottom(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget account() {
     return Padding(
