@@ -159,7 +159,7 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
         decoration: BoxDecoration(
           color: backgroundColors,
           image: DecorationImage(
-            image: AssetImage('images/7.png'),
+            image: AssetImage('images/log.png'),
             fit: BoxFit.fitWidth,
           ),
         ),

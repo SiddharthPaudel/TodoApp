@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../const/colors.dart';
 import '../data/auth_data.dart';
 
-
 class SignUp_Screen extends StatefulWidget {
   final VoidCallback show;
   SignUp_Screen(this.show, {super.key});
@@ -77,13 +76,11 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           SizedBox(width: 5),
           GestureDetector(
             onTap: widget.show,
-            child: Text(
-              'Login',
-              style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold)
-            ),
+            child: Text('Login',
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold)),
           )
         ],
       ),
@@ -138,7 +135,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
                 color: _focusNode.hasFocus ? custom_green : Color(0xffc5c5c5),
               ),
               contentPadding:
-              EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                  EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               hintText: typeName,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -168,7 +165,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
         decoration: BoxDecoration(
           color: backgroundColors,
           image: DecorationImage(
-            image: AssetImage('images/7.png'),
+            image: AssetImage('images/log.png'),
             fit: BoxFit.fitWidth,
           ),
         ),
